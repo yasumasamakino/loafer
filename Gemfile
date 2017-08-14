@@ -53,9 +53,9 @@ group :development do
 end
 
 group :deployment do
-  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-rails'
-  gem 'rvm-capistrano'
+  gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano3-unicorn'
 end

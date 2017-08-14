@@ -1,18 +1,3 @@
-
-set :stage, :production
-set :branch, 'master'
-
-role :app, %w{yagu1031@49.212.170.218}
-role :web, %w{yagu1031@49.212.170.218}
-role :db,  %w{yagu1031@49.212.170.218}
-
-server '49.212.170.218', user: 'yagu1031', roles: %w{web app db}, port: 49152, ssh_options: {
-  keys: %w(~/.ssh/id_rsa_loafer),
-  forward_agent: true,
-  auth_methods: %w(publickey)
-}
-
-
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -46,7 +31,18 @@ server '49.212.170.218', user: 'yagu1031', roles: %w{web app db}, port: 49152, s
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
+set :stage, :production
+set :branch, 'master'
 
+role :app, %w{yagu1031@49.212.170.218}
+role :web, %w{yagu1031@49.212.170.218}
+role :db,  %w{yagu1031@49.212.170.218}
+
+server '49.212.170.218', user: 'yagu1031', roles: %w{web app db}, port: 49152, ssh_options: {
+  keys: %w(~/.ssh/id_rsa_loafer),
+  forward_agent: true,
+  auth_methods: %w(publickey)
+}
 
 # Custom SSH Options
 # ==================
