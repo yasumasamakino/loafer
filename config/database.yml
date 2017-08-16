@@ -51,4 +51,4 @@ production:
   <<: *default
   database: loafer_production
   username: loafer
-  password: loafer
+  password: <%= ENV['LOAFER_DATABASE_PASSWORD'] %>
