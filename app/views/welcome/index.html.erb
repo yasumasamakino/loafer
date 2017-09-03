@@ -87,47 +87,6 @@
     </div>
     <!-- /.container -->
 </nav>
-
-<!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url(<%= asset_path "slide_1.jpg" %>);"></div>
-            <div class="carousel-caption">
-                <h6>photo by <a href="https://www.flickr.com/photos/l33tminion/" target="_blank">Sam</a></h6>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url(<%= asset_path "slide_2.jpg" %>);"></div>
-            <div class="carousel-caption">
-                <h6>photo by <a href="https://www.flickr.com/photos/hjl/" target="_blank">hjl</a></h6>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url(<%= asset_path "slide_3.jpg" %>);"></div>
-            <div class="carousel-caption">
-                <h6>photo by <a href="https://www.flickr.com/photos/dannychoo/" target="_blank">Danny Choo</a></h6>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</header>
-
 <!-- Page Content -->
 <div class="container">
 
@@ -144,7 +103,10 @@
   <!-- Intro Content -->
   <div class="row">
       <div class="col-md-6">
-          <img class="img-responsive" src="https://placehold.it/750x450" alt="">
+          <img class="img-responsive" src="<%= asset_path "about.jpg" %>" alt="About" width="100%">
+          <div class="carousel-indicators">
+              <h6>photo by <a href="https://www.flickr.com/photos/l33tminion/" target="_blank">Sam</a></h6>
+          </div>
       </div>
       <div class="col-md-6">
           <h2>ローファーを履こう！</h2>
@@ -203,78 +165,64 @@
 </div>
 <!-- /.row -->
 
+<!-- Features Section -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">まずはこの一足。ペニーローファーの歴史</h2>
+    </div>
+    <div class="col-md-6">
+      <p>Wikipediaにも書かれていますが、ローファーの由来は諸説あるようですね。
+      ローファーはいわゆるスリッポンシューズですが
+      スリッポンシューズはモカシンなどネイティブ・アメリカンからヨーロッパ貴族まで、
+      様々な時代に使用されていることが歴史から分かっているとのこと。
+      「靴」として発想しやすい形状ということなのでしょう。</p>
+      <p>ローファーの中でも一番スタンダードなのは
+      「ペニーローファー」ですね。「コインローファー」とも呼ばれます。
+      また、「ペニーローファー」は一番古いデザインのローファーと言われています。</p>
+
+      <p>「ペニーローファー」は1876年に創立されたG.H. Bassが
+      「Weejun」と名付けたローファーを大流行させ、大衆化されました。</p>
+
+      <p>その際、G.H. Bassはシンプルなローファーにひとつ象徴的なデザインを加えました。
+      ローファー本体を横切る帯を付け、唇のような形状のデザインが施されたのです。
+      きっとこのデザインが当時の若者の心に刺さったのでしょう。</p>
+
+      <p>Loafer's Mania!!もこの絶妙なシンプル加減が「ペニーローファー」の最大の魅力だと思っています。</p>
+
+      <p>なお、「ペニーローファー」「コインローファー」という名称の由来も諸説あるようです。
+      諸説の詳細は省きますが、
+      諸説あるという点が、現在に至るまで大衆文化に受け入れられて来たことを証明しているのだと思います。</p>
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive" src="<%= asset_path "ghbass_logan.jpg" %>" alt="G.H.BASS&COローガン" width="80%">
+        <div class="carousel-indicators">
+            <h6>出典 <a href="https://www.ghbass.com/" target="_blank">G.H.BASS&CO</a></h6>
+        </div>
+
+    </div>
+</div>
+<!-- /.row -->
+
   <!-- Portfolio Section -->
   <div class="row">
       <div class="col-lg-12">
-        <h2 class="page-header">おすすめのローファー</h2>
+        <h2 class="page-header">管理人のローファーコレクション！</h2>
+        <p>かなりしょぼい…増やしていくぞー！</p>
       </div>
       <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
+          <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "mylist_ghbass_black.jpg" %>" alt="マイローファーG.H.BASSローガンブラック" width="80%">
       </div>
       <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
+          <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "mylist_ghbass_burgundy.jpg" %>" alt="マイローファーG.H.BASSローガンバーガンディー" width="80%">
       </div>
       <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-          <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="https://placehold.it/700x450" alt="">
-          </a>
+          <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "mylist_unitedarrows_slipon.jpg" %>" alt="マイローファーUNITEDARROWSスリッポン" width="80%">
       </div>
   </div>
   <!-- /.row -->
 
-    <!-- Features Section -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header">まずはこの一足。ペニーローファーの歴史</h2>
-        </div>
-        <div class="col-md-6">
-          <p>Wikipediaにも書かれていますが、ローファーの由来は諸説あるようですね。
-          ローファーはいわゆるスリッポンシューズですが
-          スリッポンシューズはモカシンなどネイティブ・アメリカンからヨーロッパ貴族まで、
-          様々な時代に使用されていることが歴史から分かっているとのこと。
-          「靴」として発想しやすい形状ということなのでしょう。</p>
-          <p>ローファーの中でも一番スタンダードなのは
-          「ペニーローファー」ですね。「コインローファー」とも呼ばれます。
-          また、「ペニーローファー」は一番古いデザインのローファーと言われています。</p>
-
-          <p>「ペニーローファー」は1876年に創立されたG.H. Bassが
-          「Weejun」と名付けたローファーを大流行させ、大衆化されました。</p>
-
-          <p>その際、G.H. Bassはシンプルなローファーにひとつ象徴的なデザインを加えました。
-          ローファー本体を横切る帯を付け、唇のような形状のデザインが施されたのです。
-          きっとこのデザインが当時の若者の心に刺さったのでしょう。</p>
-
-          <p>Loafer's Mania!!もこの絶妙なシンプル加減が「ペニーローファー」の最大の魅力だと思っています。</p>
-
-          <p>なお、「ペニーローファー」「コインローファー」という名称の由来も諸説あるようです。
-          諸説の詳細は省きますが、
-          諸説あるという点が、現在に至るまで大衆文化に受け入れられて来たことを証明しているのだと思います。</p>
-        </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="https://placehold.it/700x450" alt="">
-        </div>
-    </div>
-    <!-- /.row -->
     <!-- Marketing Icons Section -->
+    <!--
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
@@ -322,46 +270,66 @@
             </div>
         </div>
     </div>
+    -->
     <!-- /.row -->
 
     <!-- Portfolio Section -->
     <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-header">日本・世界の代表的なローファーブランド</h2>
+          <h2 class="page-header">ローファーを有する世界のブランド</h2>
         </div>
         <div class="col-md-4 col-sm-6 center-block">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "ghbass_logo.png" %>" alt="">
-            </a>
-            <div class="carousel-caption">
-                <h6>GHBass</h6>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "alden_logo.png" %>" alt="">
-            </a>
-            <div class="carousel-caption">
-                <h6>GHBass</h6>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-              <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "crockettandjones_logo.png" %>" alt="">
+            <a href="https://www.ghbass.com/home.do" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "ghbass_logo.gif" %>" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "AllenEdmonds_logo.png" %>" alt="">
+            <a href="https://www.johnlobb.com/jp/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "johnlobb_logo.jpg" %>" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
+            <a href="https://www.edwardgreen.jp/" target="_blank">
+              <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "edwardgreen_logo.png" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="http://www.aldenshoe.com/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "alden_logo.jpg" %>" alt="" width="70%">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="http://www.jmweston.fr/jp/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "jmweston_logo.png" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="https://www.crockettandjones.com/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "crockettandjones_logo.png" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="https://www.cheaney.co.uk/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "josephcheaney_logo.png" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="http://www.british-made.jp/fs/british/c/churchs/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "churchs_logo.png" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="http://www.jalansriwijaya.com/" target="_blank">
+                <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "jaran_logo.jpg" %>" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="http://www.regalshoes.jp/shop/default.aspx/" target="_blank">
                 <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "regal_logo.png" %>" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
+            <a href="https://www.haruta-shoes.co.jp/" target="_blank">
                 <img class="img-responsive img-portfolio img-hover" src="<%= asset_path "haruta_logo.png" %>" alt="">
             </a>
         </div>
